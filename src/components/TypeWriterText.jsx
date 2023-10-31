@@ -47,19 +47,19 @@ const TypeWriterText = () => {
   return (
   <>
       <Title>
-    Discover a new era of color
+    Discover a new era of Robots
     
     <Typewriter
     options={{autoStart:true,
     loop:true,}}
   onInit={(typewriter) => {
-    typewriter.typeString('<span class="text-1">Web Development</span>')
+    typewriter.typeString('<span class="text-1">Zogtron</span>')
     .pauseFor(2000)
     .deleteAll()
-    .typeString('<span class="text-2">Graphics Design</span>')
+    .typeString('<span class="text-2">Astrotronic</span>')
     .pauseFor(2000)
     .deleteAll()
-    .typeString('<span class="text-3">Digital Marketing</span>')
+    .typeString('<span class="text-3">Cyborian</span>')
     .pauseFor(2000)
     .deleteAll()
     .start()
@@ -68,7 +68,7 @@ const TypeWriterText = () => {
 
     </Title>
 
-<SubTitle>Bored of apes? Try something new</SubTitle>
+<SubTitle>Try something new</SubTitle>
 
 
 <ButtonContainer>

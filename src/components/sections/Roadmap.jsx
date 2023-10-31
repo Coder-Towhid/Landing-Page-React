@@ -124,7 +124,7 @@ const RoadMapItem = ({title, subtext}) =>{
 
 const Roadmap = () => {
   return (
-    <Section>
+    <Section id="roadmap">
       <Title>Roadmap</Title>
       <Container>
         <SvgContainer>
@@ -132,11 +132,11 @@ const Roadmap = () => {
         </SvgContainer>
         <Items>
         <Item>&nbsp;</Item>
-       <RoadMapItem title="tis is title" subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"/>
-       <RoadMapItem title="tis is title" subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"/>
-       <RoadMapItem title="tis is title" subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"/>
-       <RoadMapItem title="tis is title" subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"/>
-       <RoadMapItem title="tis is title" subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"/>
+       <RoadMapItem title="This is title" subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"/>
+       <RoadMapItem title="This is title" subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"/>
+       <RoadMapItem title="This is title" subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"/>
+       <RoadMapItem title="This is title" subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"/>
+       <RoadMapItem title="This is title" subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"/>
        
       
       

@@ -79,12 +79,12 @@ const ServiceItem = ({ img, service = "", price = 0, passRef }) => {
       <img src={img} alt="service" />
       <Details>
         <div>
-          <span>service</span>
+          <span>Name</span>
           <br />
           <h3>{service}</h3>
         </div>
         <div>
-          <span>Price</span>
+          <span>Code</span>
           <br />
           <h3>{price}</h3>
         </div>
@@ -98,53 +98,53 @@ const Showcase = () => {
   const Row2Ref = useRef(null);
 
   return (
-    <Section>
+    <Section id="showcase">
       <Row direction="none" ref={Row1Ref}>
         <ServiceItem
           img={
-            "https://img.freepik.com/premium-vector/portrait-male-graphic-designer-working-computer-workplace-peach-background_1302-42446.jpg?w=2000"
+            "https://robohash.org/1.png?size=500x500"
           }
-          service={"Web Development"}
+          service={"Zogtron"}
           price={999999}
           passRef={Row1Ref}
         />
         <ServiceItem
           img={
-            "https://img.freepik.com/premium-vector/portrait-male-graphic-designer-working-computer-workplace-peach-background_1302-42446.jpg?w=2000"
+            "https://robohash.org/2.png?size=500x500"
           }
-          service={"Web Development"}
+          service={"Xylok"}
           price={999999}
           passRef={Row1Ref}
         />
         <ServiceItem
           img={
-            "https://img.freepik.com/premium-vector/portrait-male-graphic-designer-working-computer-workplace-peach-background_1302-42446.jpg?w=2000"
+            "https://robohash.org/3.png?size=500x500"
           }
-          service={"Web Development"}
+          service={"Quasarix"}
           price={999999}
           passRef={Row1Ref}
         />
         <ServiceItem
           img={
-            "https://img.freepik.com/premium-vector/portrait-male-graphic-designer-working-computer-workplace-peach-background_1302-42446.jpg?w=2000"
+            "https://robohash.org/4.png?size=500x500"
           }
-          service={"Web Development"}
+          service={"Astrotronic"}
           price={999999}
           passRef={Row1Ref}
         />
         <ServiceItem
           img={
-            "https://img.freepik.com/premium-vector/portrait-male-graphic-designer-working-computer-workplace-peach-background_1302-42446.jpg?w=2000"
+            "https://robohash.org/5.png?size=500x500"
           }
-          service={"Web Development"}
+          service={"Cyborian"}
           price={999999}
           passRef={Row1Ref}
         />
         <ServiceItem
           img={
-            "https://img.freepik.com/premium-vector/portrait-male-graphic-designer-working-computer-workplace-peach-background_1302-42446.jpg?w=2000"
+            "https://robohash.org/6.png?size=500x500"
           }
-          service={"Web Development"}
+          service={"Galaxius"}
           price={999999}
           passRef={Row1Ref}
         />
@@ -152,49 +152,49 @@ const Showcase = () => {
       <Row direction="reverse" ref={Row2Ref}>
       <ServiceItem
           img={
-            "https://img.freepik.com/premium-vector/portrait-male-graphic-designer-working-computer-workplace-peach-background_1302-42446.jpg?w=2000"
+            "https://robohash.org/7.png?size=500x500"
           }
-          service={"Web Development"}
+          service={"Technoray"}
           price={999999}
           passRef={Row2Ref}
         />
        <ServiceItem
           img={
-            "https://img.freepik.com/premium-vector/portrait-male-graphic-designer-working-computer-workplace-peach-background_1302-42446.jpg?w=2000"
+            "https://robohash.org/8.png?size=500x500"
           }
-          service={"Web Development"}
+          service={"Cosmoblade"}
           price={999999}
           passRef={Row2Ref}
         />
          <ServiceItem
           img={
-            "https://img.freepik.com/premium-vector/portrait-male-graphic-designer-working-computer-workplace-peach-background_1302-42446.jpg?w=2000"
+            "https://robohash.org/9.png?size=500x500"
           }
-          service={"Web Development"}
+          service={"Astrobyte"}
           price={999999}
           passRef={Row2Ref}
         />
          <ServiceItem
           img={
-            "https://img.freepik.com/premium-vector/portrait-male-graphic-designer-working-computer-workplace-peach-background_1302-42446.jpg?w=2000"
+            "https://robohash.org/10.png?size=500x500"
           }
-          service={"Web Development"}
+          service={"Galactron"}
           price={999999}
           passRef={Row2Ref}
         />
          <ServiceItem
           img={
-            "https://img.freepik.com/premium-vector/portrait-male-graphic-designer-working-computer-workplace-peach-background_1302-42446.jpg?w=2000"
+            "https://robohash.org/11.png?size=500x500"
           }
-          service={"Web Development"}
+          service={"Plasmabot"}
           price={999999}
           passRef={Row2Ref}
         />
          <ServiceItem
           img={
-            "https://img.freepik.com/premium-vector/portrait-male-graphic-designer-working-computer-workplace-peach-background_1302-42446.jpg?w=2000"
+            "https://robohash.org/12.png?size=500x500"
           }
-          service={"Web Development"}
+          service={"Nebulix"}
           price={999999}
           passRef={Row2Ref}
         />
