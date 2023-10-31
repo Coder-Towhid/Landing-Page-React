@@ -9,10 +9,14 @@ display: flex;
 flex-direction: column;
 border-bottom: 1px solid ${props=> props.theme.carouselColor};
 margin: 3rem 0;
+@media (max-width: 48em) {
+  margin: 2rem 0;
+}
+
 `
 
 const Title = styled.div`
-font-size: ${props=> props.theme.fontlg};
+font-size: ${props=> props.theme.fontmd};
 display:flex;
 justify-content: space-between;
 align-items: center;
@@ -36,7 +40,10 @@ const Indicator = styled.span`
 font-size: ${props=> props.theme.fontxxl};
 display:flex;
 justify-content:center;
-align-items:center;`
+align-items:center;
+@media (max-width: 48em) {
+  font-size: ${props=> props.theme.fontxl};
+}`
 
 // eslint-disable-next-line react/prop-types
 const Accordion = ({title, children}) => {

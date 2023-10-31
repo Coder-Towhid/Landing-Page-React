@@ -17,6 +17,18 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 64em) {
+    width:85%;
+    }
+  @media (max-width: 48em) {
+    flex-direction: column-reverse;
+    width:100%;
+    &>*:first-child{
+      width:100%;
+      margin-top:2rem;
+    } 
+    }
+
 `;
 
 const Box = styled.div`
@@ -27,6 +39,17 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
 `;
+const HeroImg = styled.div`
+width:100%;
+
+img{
+  width:100%;
+  height:auto;
+}
+@media (max-width: 64em) {
+ min-width:40vw;
+}
+`
 
 const HERO_IMG = [
   "https://robohash.org/1.png?size=500x500",
@@ -56,7 +79,10 @@ const Home = () => {
           <TypeWriterText />
         </Box>
         <Box>
-          <img src={HERO_IMG[selectedImg]} alt="" />
+        <HeroImg>
+        <img src={HERO_IMG[selectedImg]} alt="" />
+        </HeroImg>
+          
         </Box>
       </Container>
     </Section>

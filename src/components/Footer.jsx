@@ -18,13 +18,24 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid ${(props) => props.theme.text};
+  @media (max-width: 48em) {
+    width:90%;
+
+    h1{
+      font-size: ${props=>props.theme.fontxxxl};
+      text-align:center;
+    }
+  }
 `;
 
 const Left = styled.div`
 display:flex;
 flex-direction: column;
 justify-content: center;
-align-itemsL center;`;
+align-itemsL center;
+@media (max-width: 48em) {
+    width:100%;
+  }`
 
 const IconList = styled.div`
 display: flex;
@@ -39,6 +50,7 @@ transition: all 0.2s ease;
   transform: scale(1.2);
 }
 }
+
 `;
 
 const MenuItems = styled.ul`
@@ -48,6 +60,9 @@ const MenuItems = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 1rem;
+  @media (max-width: 48em) {
+   display: none;
+  }
 `;
 const Item = styled.li`
   width: fit-content;

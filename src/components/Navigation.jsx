@@ -14,6 +14,19 @@ const NavBar = styled.nav`
   width: 85%;
   height: ${(props) => props.theme.navHeight};
   margin: 0 auto;
+
+  .mobile{
+    display:none;
+  }
+  
+  @media (max-width: 64em) {
+    .desktop{
+      display:none;
+    }
+    .mobile{
+      display:inline-block;
+    }
+  }
 `;
 
 const Menu = styled.ul`
@@ -22,8 +35,10 @@ const Menu = styled.ul`
   align-items: center;
   list-style: none;
 
+
   @media (max-width: 64em) {
     /*1024px */
+    
     position: fixed;
     top: ${(props) => props.theme.navHeight};
     left: 0;
@@ -34,19 +49,23 @@ const Menu = styled.ul`
     z-index: 50;
     background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.85)`};
     backdrop-filter: blur(2px);
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
 
     transform: ${(props) =>
-      props.click ? 'translateY(0)' : 'translateY(100%)'};
-       transition: all 0.3 ease;
- 
+      props.click ? "translateY(0)" : "translateY(1000%)"};
+      
+     
+      
+
+    transition: all 0.3s ease;
   }
 `;
 const MenuItem = styled.li`
   margin: 0 1rem;
   color: ${(props) => props.theme.text};
   cursor: pointer;
+  
 
   &::after {
     content: " ";
@@ -91,13 +110,10 @@ const HamburgerMenu = styled.span`
 
   transition: all 0.3s ease;
 
-  
   @media (max-width: 64em) {
     /*1024px */
-    display:flex;
-
-    
-    }
+    display: flex;
+  }
 
   &::after,
   &::before {
@@ -148,8 +164,16 @@ const Navigation = () => {
           <MenuItem onClick={() => scrollTo("showcase")}>ShowCase</MenuItem>
           <MenuItem onClick={() => scrollTo("team")}>Team</MenuItem>
           <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
+          <MenuItem>
+            <div className="mobile">
+            <Button text="Subscribe" link="https://google.com" />
+            </div>
+          </MenuItem>
+          
         </Menu>
-        <Button text="Subscribe" link="https://google.com" />
+        <div className="desktop">
+          <Button text="Subscribe" link="https://google.com" />
+        </div>
       </NavBar>
     </Section>
   );
