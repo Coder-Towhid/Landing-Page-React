@@ -1,8 +1,11 @@
-# React + Vite
+Resources Used in This Project
+Character Figures: https://robohash.org/
+Fonts: https://fontsource.org/
+Svg Icons From: https://react-icons.github.io/react-icons/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+External Libraries used in this project:
+styled-components
+GSAP
+type-writer effect
+react-confetti
+react-use
