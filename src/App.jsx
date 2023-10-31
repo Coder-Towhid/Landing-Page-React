@@ -8,6 +8,7 @@ import Showcase from "./components/sections/Showcase"
 import Team from "./components/sections/Team"
 import GlobalStyles from "./styles/GlobalStyles"
 import { light } from "./styles/Themes"
+import Roadmap from "./components/sections/Roadmap"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
     <Navigation/> 
     <Home/>
     <About/>
+    <Roadmap/>
     <Showcase/>
     <Team/>
     <Faq/>

@@ -30,7 +30,7 @@ span{
 const SubTitle = styled.h3`
 font-size:${props => props.theme.fontlg};
 text-transform:capitalize;
-color: ${props => `rgba(${props.theme.text}, 0.6)`};
+color: ${props => `rgba(${props.theme.textRgba}, 0.6)`};
 font-weight: 600;
 margin-bottom: 1rem;
 width:80%;
