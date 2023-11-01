@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/all";
 
 const Section = styled.section`
   min-height: 100vh;
-  height:auto;
+  height: auto;
   width: 100vw;
   background-color: ${(props) => props.theme.text};
   position: relative;
@@ -36,19 +36,16 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   @media (max-width: 64em) {
- 
     width: 80%;
   }
   @media (max-width: 48em) {
-   
     width: 90%;
-    flex-direction:column;
+    flex-direction: column;
 
-    &>*:last-child{
-      &>*:first-child{
-        margin-top:0;
+    & > *:last-child {
+      & > *:first-child {
+        margin-top: 0;
       }
-
     }
   }
 `;
@@ -56,10 +53,9 @@ const Container = styled.div`
 const Box = styled.div`
   width: 45%;
   @media (max-width: 64em) {
- 
- width: 90%;
- align-self:center;
-}
+    width: 90%;
+    align-self: center;
+  }
 `;
 
 const Faq = () => {
@@ -87,29 +83,29 @@ const Faq = () => {
       <Title>Faq</Title>
       <Container>
         <Box>
-          <Accordion title="Where can I get the best service">
+          <Accordion title="What are the different types of robots?">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys
           </Accordion>
-          <Accordion title="Where can I get the best service">
+          <Accordion title="Where can I purchase robots?">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys
           </Accordion>
-          <Accordion title="Where can I get the best service">
+          <Accordion title="How do robots sense their environment?">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys
           </Accordion>
         </Box>
         <Box>
-          <Accordion title="Where can I get the best service">
+          <Accordion title="Where can I get the best service?">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys
           </Accordion>
-          <Accordion title="Where can I get the best service">
+          <Accordion title="Where can I purchase robots?">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys
           </Accordion>
-          <Accordion title="Where can I get the best service">
+          <Accordion title="Where can I get the best service?">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys
           </Accordion>

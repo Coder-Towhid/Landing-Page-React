@@ -3,6 +3,7 @@ import { dark } from "../../styles/Themes";
 import Button from "../Button";
 import Carousel from "../Carousel";
 
+// ******* section *********
 const Section = styled.section`
   min-height: 100vh;
   width: 100%;
@@ -13,6 +14,8 @@ const Section = styled.section`
   align-items: center;
   position: relative;
 `;
+
+// ******* Container *********
 const Container = styled.div`
   width: 75%;
 
@@ -39,10 +42,12 @@ const Container = styled.div`
   }
 `;
 
+// ******* Box *********
+
 const Box = styled.div`
   width: 50%;
   height: 100%;
-  min-height:60vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,6 +58,7 @@ const Box = styled.div`
   }
 `;
 
+// ******* Title *********
 const Title = styled.h2`
   font-size: ${(props) => props.theme.fontxxl};
   text-transform: capitalize;
@@ -71,6 +77,8 @@ const Title = styled.h2`
     font-size: ${(props) => props.theme.fontlg};
   }
 `;
+
+// ******* SubText *********
 const SubText = styled.p`
   font-size: ${(props) => props.theme.fontlg};
   width: 80%;
@@ -88,6 +96,8 @@ const SubText = styled.p`
     font-size: ${(props) => props.theme.fontsm};
   }
 `;
+
+// ******* SubTextLight *********
 const SubTextLight = styled.p`
   font-size: ${(props) => props.theme.fontmd};
   width: 80%;
@@ -105,6 +115,8 @@ const SubTextLight = styled.p`
     font-size: ${(props) => props.theme.fontxs};
   }
 `;
+
+// ******* ButtonContainer *********
 const ButtonContainer = styled.div`
   width: 80%;
   margin: 1rem auto;
@@ -126,17 +138,20 @@ const About = () => {
           <Carousel />
         </Box>
         <Box>
-          <Title>Welcome to the Landing Page</Title>
+          <Title>Welcome to the Land of ROBOTS</Title>
           <SubText>
             {" "}
-            Welcome to the Landing Page Welcome to the Landing Page Welcome to
-            the Landing Page Welcome to the Landing Page
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industrys standard dummy
           </SubText>
           <SubTextLight>
-            Welcome to the Landing Page Welcome to the Landing Page Welcome to
-            the Landing Page Welcome to the Landing Page
+            Where does it come from? Contrary to popular belief, Lorem Ipsum is
+            not simply random text. It has roots in a piece of classical Latin
+            literature from 45 BC, making it over 2000 years old. Richard
+            McClintock, a Latin
           </SubTextLight>
           <ButtonContainer>
+            {/* using dark theme for the button */}
             <ThemeProvider theme={dark}>
               <Button text="SUBSCRIBE" link="#" />
             </ThemeProvider>

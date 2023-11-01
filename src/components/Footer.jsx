@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import Banner from "./Banner";
 import Logo from "./Logo";
-import { FaFacebook, FaInstagramSquare , FaLinkedin} from 'react-icons/fa';
+// icons for social media
+import { FaFacebook, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+
+// ****** Section ******
 const Section = styled.section`
   min-height: 100vh;
   width: 100vw;
@@ -11,6 +14,7 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
 `;
+// ****** Container ******
 const Container = styled.div`
   width: 75%;
   margin: 2rem auto;
@@ -19,14 +23,16 @@ const Container = styled.div`
   align-items: center;
   border-bottom: 1px solid ${(props) => props.theme.text};
   @media (max-width: 48em) {
-    width:90%;
+    width: 90%;
 
-    h1{
-      font-size: ${props=>props.theme.fontxxxl};
-      text-align:center;
+    h1 {
+      font-size: ${(props) => props.theme.fontxxxl};
+      text-align: center;
     }
   }
 `;
+
+// ****** Left ******
 
 const Left = styled.div`
 display:flex;
@@ -35,8 +41,10 @@ justify-content: center;
 align-itemsL center;
 @media (max-width: 48em) {
     width:100%;
-  }`
+  }
+`;
 
+// ****** IconList ******
 const IconList = styled.div`
 display: flex;
 align-items; center;
@@ -53,6 +61,7 @@ transition: all 0.2s ease;
 
 `;
 
+// ****** MenuItems ******
 const MenuItems = styled.ul`
   list-style: none;
   width: 50%;
@@ -61,9 +70,10 @@ const MenuItems = styled.ul`
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 1rem;
   @media (max-width: 48em) {
-   display: none;
+    display: none;
   }
 `;
+// ****** Item ******
 const Item = styled.li`
   width: fit-content;
   cursor: pointer;
@@ -79,7 +89,7 @@ const Item = styled.li`
     width: 100%;
   }
 `;
-
+// ****** Bottom ******
 const Bottom = styled.div`
   width: 75%;
   margin: 0 auto;
@@ -97,9 +107,9 @@ const Footer = () => {
           <Logo />
 
           <IconList>
-          <FaFacebook />
-          <FaInstagramSquare/>
-          <FaLinkedin/>
+            <FaFacebook />
+            <FaInstagramSquare />
+            <FaLinkedin />
           </IconList>
         </Left>
 

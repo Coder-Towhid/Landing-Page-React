@@ -2,6 +2,8 @@ import styled, { ThemeProvider } from "styled-components";
 import { dark } from "../styles/Themes";
 import Button from "./Button";
 
+// **** Section *******
+
 const Section = styled.section`
   width: 100vw;
   height: 25rem;
@@ -14,14 +16,13 @@ const Section = styled.section`
 
   overflow: hidden;
   @media (max-width: 48em) {
-    
     flex-direction: column;
   }
 `;
-
+// **** ImgContainer *******
 const ImgContainer = styled.div`
   width: 100%;
-  height:100%;
+  height: 100%;
   opacity: 0.2;
   position: absolute;
   top: 50%;
@@ -33,8 +34,9 @@ const ImgContainer = styled.div`
     width: 100%;
     height: 100%;
   }
-  
 `;
+
+// **** Title *******
 const Title = styled.h2`
   font-size: ${(props) => props.theme.fontxxxl};
   color: ${(props) => props.theme.body};
@@ -42,17 +44,18 @@ const Title = styled.h2`
   z-index: 10;
   width: 35%;
   @media (max-width: 64em) {
-    text-align:center;
+    text-align: center;
     font-size: ${(props) => props.theme.fontxxl};
     width: 40%;
   }
   @media (max-width: 48em) {
-    
     font-size: ${(props) => props.theme.fontxl};
-    padding:  2rem 0;
+    padding: 2rem 0;
     width: 100%;
   }
 `;
+
+// **** BtnContainer *******
 
 const BtnContainer = styled.div`
   font-size: ${(props) => props.theme.fontxl};
@@ -61,22 +64,17 @@ const BtnContainer = styled.div`
   justify-content: center;
   display: flex;
   @media (max-width: 64em) {
-
     width: 100%;
   }
   @media (max-width: 48em) {
-    
-   
-    padding:  1rem 2rem;
-   
+    padding: 1rem 2rem;
   }
   @media (max-width: 48em) {
-    
-   
-    padding:  0.5rem 2rem;
+    padding: 0.5rem 2rem;
     font-size: ${(props) => props.theme.fontlg};
   }
 `;
+
 const Banner = () => {
   return (
     <Section>

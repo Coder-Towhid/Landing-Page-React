@@ -3,10 +3,13 @@ import Button from "./Button";
 import Logo from "./Logo";
 import { useState } from "react";
 
+// **** section *********
 const Section = styled.section`
   width: 100vw;
   background-color: ${(props) => props.theme.body};
 `;
+
+// **** NavbaR *********
 const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -15,30 +18,30 @@ const NavBar = styled.nav`
   height: ${(props) => props.theme.navHeight};
   margin: 0 auto;
 
-  .mobile{
-    display:none;
+  .mobile {
+    display: none;
   }
-  
+
   @media (max-width: 64em) {
-    .desktop{
-      display:none;
+    .desktop {
+      display: none;
     }
-    .mobile{
-      display:inline-block;
+    .mobile {
+      display: inline-block;
     }
   }
 `;
 
+// **** Menu *********
 const Menu = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
 
-
   @media (max-width: 64em) {
     /*1024px */
-    
+
     position: fixed;
     top: ${(props) => props.theme.navHeight};
     left: 0;
@@ -54,18 +57,16 @@ const Menu = styled.ul`
 
     transform: ${(props) =>
       props.click ? "translateY(0)" : "translateY(1000%)"};
-      
-     
-      
 
     transition: all 0.3s ease;
   }
 `;
+
+// **** MenuItem *********
 const MenuItem = styled.li`
   margin: 0 1rem;
   color: ${(props) => props.theme.text};
   cursor: pointer;
-  
 
   &::after {
     content: " ";
@@ -89,6 +90,7 @@ const MenuItem = styled.li`
   }
 `;
 
+// **** HamburgerMenu *********
 const HamburgerMenu = styled.span`
   width: ${(props) => (props.click ? "2rem" : "1.5rem")};
   height: 2px;
@@ -136,8 +138,10 @@ const HamburgerMenu = styled.span`
 `;
 
 const Navigation = () => {
+  // useState for navigation status
   const [click, setClick] = useState(false);
 
+  // For smooth scrolling & navigation
   const scrollTo = (id) => {
     let element = document.getElementById(id);
     element.scrollIntoView({
@@ -166,10 +170,9 @@ const Navigation = () => {
           <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
           <MenuItem>
             <div className="mobile">
-            <Button text="Subscribe" link="https://google.com" />
+              <Button text="Subscribe" link="https://google.com" />
             </div>
           </MenuItem>
-          
         </Menu>
         <div className="desktop">
           <Button text="Subscribe" link="https://google.com" />

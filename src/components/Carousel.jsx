@@ -12,6 +12,7 @@ import Arrow from "../assets/Arrow.svg";
 // import required modules
 import { Pagination, Navigation, Autoplay, EffectCards } from "swiper/modules";
 
+// ****** container ***********
 const Container = styled.div`
   width: 25vw;
   height: 75vh;
@@ -19,16 +20,16 @@ const Container = styled.div`
     height: 60vh;
   }
   @media (max-width: 64em) {
-    height:50vh;
-    width:30vw;
+    height: 50vh;
+    width: 30vw;
   }
   @media (max-width: 48em) {
-    height:50vh;
-    width:40vw;
+    height: 50vh;
+    width: 40vw;
   }
   @media (max-width: 30em) {
-    height:45vh;
-    width:60vw;
+    height: 45vh;
+    width: 60vw;
   }
   .swiper {
     width: 100%;
@@ -41,11 +42,11 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    img{
-      display:block;
-      height:auto;
-      width:100%;
-      object-fit:cover;
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
+      object-fit: cover;
     }
   }
   .swiper-button-next {
@@ -60,10 +61,10 @@ const Container = styled.div`
       display: none;
     }
     @media (max-width: 64em) {
-      width:3rem;
+      width: 3rem;
     }
     @media (max-width: 30em) {
-      width:2rem;
+      width: 2rem;
     }
   }
   .swiper-button-prev {
@@ -79,10 +80,10 @@ const Container = styled.div`
       display: none;
     }
     @media (max-width: 64em) {
-      width:3rem;
+      width: 3rem;
     }
     @media (max-width: 30em) {
-      width:2rem;
+      width: 2rem;
     }
   }
 `;
@@ -106,11 +107,15 @@ const Carousel = () => {
         grabCursor={true}
         className="mySwiper"
       >
-        {Array(10).fill('a').map((item, index) => (
-          <SwiperSlide key={`slide-${index}`}>
-            <img src={`https://robohash.org/slide-${index}.png?size=300x300`} />
-          </SwiperSlide>
-        ))}
+        {Array(10)
+          .fill("a")
+          .map((item, index) => (
+            <SwiperSlide key={`slide-${index}`}>
+              <img
+                src={`https://robohash.org/slide-${index}.png?size=300x300`}
+              />
+            </SwiperSlide>
+          ))}
       </Swiper>
     </Container>
   );

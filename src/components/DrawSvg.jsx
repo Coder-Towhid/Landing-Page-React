@@ -2,8 +2,11 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
+
+// converted from SVGR
 import Vector from "../icons/Vector";
 
+// ***** VectorContainer ****
 const VectorContainer = styled.div`
   position: absolute;
   top: 0.5rem;
@@ -18,15 +21,18 @@ const VectorContainer = styled.div`
     height: 100%;
   }
   @media (max-width: 48em) {
-    left: 1rem; 
+    left: 1rem;
   }
-`
+`;
+
+// ***** Bouncing the ball before it starts ****
 const Bounce = keyframes`
 from{transform: translateX(-50%) scale(0.5); }
-to{transform: translateX(-50%) scale(1)}`
+to{transform: translateX(-50%) scale(1)}`;
 
+// ***** displaying the ball before scrolling ****
 const Ball = styled.div`
-   position: absolute;
+  position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -38,7 +44,7 @@ const Ball = styled.div`
   @media (max-width: 48em) {
     left: 1rem;
   }
-`
+`;
 
 const DrawSvg = () => {
   const ref = useRef(null);
@@ -52,8 +58,6 @@ const DrawSvg = () => {
 
     const length = svg.getTotalLength();
 
-    
-
     // start positioning of svg drawing
     svg.style.strokeDasharray = length;
 
@@ -61,7 +65,7 @@ const DrawSvg = () => {
 
     svg.style.strokeDashoffset = length;
 
-   let t1 =  gsap.timeline({
+    let t1 = gsap.timeline({
       scrollTrigger: {
         trigger: element,
         start: "top center",
@@ -73,31 +77,29 @@ const DrawSvg = () => {
 
           svg.style.strokeDashoffset = length - draw;
         },
-        onToggle: self =>{
-          if(self.isActive){
-          
+        onToggle: (self) => {
+          if (self.isActive) {
             console.log("is active");
-            ballRef.current.style.display='none';
-
-          }else{   
+            ballRef.current.style.display = "none";
+          } else {
             console.log("not active");
-            ballRef.current.style.display='inline-block';
+            ballRef.current.style.display = "inline-block";
           }
-        }
+        },
       },
     });
 
     return () => {
-      if(t1) t1.kill();
+      if (t1) t1.kill();
     };
   });
   return (
-   <>
-   <Ball ref={ballRef}/>
-     <VectorContainer ref={ref} >
-      <Vector />
-    </VectorContainer>
-   </>
+    <>
+      <Ball ref={ballRef} />
+      <VectorContainer ref={ref}>
+        <Vector />
+      </VectorContainer>
+    </>
   );
 };
 

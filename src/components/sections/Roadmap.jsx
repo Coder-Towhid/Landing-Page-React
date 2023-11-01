@@ -1,12 +1,17 @@
 import styled from "styled-components";
+
+// drawing roadmap path
 import DrawSvg from "../DrawSvg";
 
+// ***** Section *********
 const Section = styled.section`
   min-height: 100vh;
   width: 100vw;
   background-color: ${(props) => props.theme.body};
   position: relative;
 `;
+
+// ***** Title *********
 const Title = styled.h2`
   font-size: ${(props) => props.theme.fontxxl};
   text-transform: capitalize;
@@ -19,9 +24,10 @@ const Title = styled.h2`
   width: fit-content;
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontxl};
-    
   }
 `;
+
+// ***** Container *********
 const Container = styled.div`
   width: 70%;
   height: 200vh;
@@ -30,7 +36,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position:relative ;
+  position: relative;
   @media (max-width: 64em) {
     width: 80%;
   }
@@ -38,12 +44,15 @@ const Container = styled.div`
     width: 90%;
   }
 `;
+
+// ***** SvgContainer *********
 const SvgContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
+// ***** Items *********
 const Items = styled.ul`
   list-style: none;
   width: 100%;
@@ -57,7 +66,7 @@ const Items = styled.ul`
     width: 90%;
   }
 
-  &>*:nth-of-type(2n + 1) {
+  & > *:nth-of-type(2n + 1) {
     justify-content: start;
 
     @media (max-width: 48em) {
@@ -71,7 +80,7 @@ const Items = styled.ul`
         border-radius: 0 50px 0 50px;
         text-align: left;
         p {
-          border-radius:  0 40px 0 40px;
+          border-radius: 0 40px 0 40px;
         }
       }
     }
@@ -88,7 +97,6 @@ const Items = styled.ul`
     text-align: left;
     div {
       border-radius: 0 50px 0 50px;
-   
     }
     p {
       border-radius: 0 40px 0 40px;
@@ -96,6 +104,7 @@ const Items = styled.ul`
   }
 `;
 
+// ***** Item *********
 const Item = styled.li`
   width: 100%;
   height: 100%;
@@ -105,6 +114,8 @@ const Item = styled.li`
     justify-content: flex-end; !important;
   }
 `;
+
+// ***** ItemContainer *********
 const ItemContainer = styled.div`
   width: 40%;
   height: fit-content;
@@ -115,6 +126,7 @@ const ItemContainer = styled.div`
   }
 `;
 
+// ***** Box *********
 const Box = styled.p`
   height: fit-content;
   background-color: ${(props) => props.theme.carouselColor};
@@ -123,6 +135,8 @@ const Box = styled.p`
   postion: relative;
   border: 1px solid ${(props) => props.theme.carouselColor};
 `;
+
+// ***** SubTitle *********
 const SubTitle = styled.span`
   display: block;
   font-size: ${(props) => props.theme.fontxl};
@@ -130,10 +144,11 @@ const SubTitle = styled.span`
   color: ${(props) => props.theme.text};
   @media (max-width: 40em) {
     font-size: ${(props) => props.theme.fontlg};
-    font-weight:600;
-    
+    font-weight: 600;
   }
 `;
+
+// ***** Text *********
 const Text = styled.span`
   display: block;
   font-size: ${(props) => props.theme.fontsm};
@@ -171,24 +186,24 @@ const Roadmap = () => {
         <Items>
           <Item>&nbsp;</Item>
           <RoadMapItem
-            title="This is title"
-            subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"
+            title="Robotics Wonders"
+            subtext="Exploring the Future of Automation, Meet the Marvels of Robotics"
           />
           <RoadMapItem
-            title="This is title"
-            subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"
+            title="RoboRevolution"
+            subtext="Where Machines Come to Life, Discover the Future of Automation"
           />
           <RoadMapItem
-            title="This is title"
-            subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"
+            title="TechBots Unleashed"
+            subtext="Journey into the Age of Automation, Meet Your Robotic Companions"
           />
           <RoadMapItem
-            title="This is title"
-            subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"
+            title="RoboFutures"
+            subtext="Discover Tomorrow's Technology Today, Exploring the Robotic Frontier"
           />
           <RoadMapItem
-            title="This is title"
-            subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm"
+            title="Mechatronics Marvels"
+            subtext="The Fusion of Mechanics and Electronics, Adventures in Robotic Integration"
           />
         </Items>
       </Container>
