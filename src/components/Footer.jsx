@@ -11,8 +11,7 @@ const Section = styled.section`
   background-color: ${(props) => props.theme.body};
   position: relative;
   color: ${(props) => props.theme.text};
-  display: flex;
-  flex-direction: column;
+
 `;
 // ****** Container ******
 const Container = styled.div`
